@@ -1,0 +1,15 @@
+<div class="block flex mt-3" id=<%= dom_id(activity)%>>
+  <div class="grow">
+    <%= link_to activity.amount, challenge_activity_path(challenge, activity) %>
+    <%= activity.note %>
+  </div>
+
+  <%= button_to activity.destroy, "delete",
+    # params: { activity: { id: activity.id }}, 
+    method: :destroy,
+    form_class: "inline-block",
+    class: "rounded-sm ml-5 py-1 px-2 bg-gray-100 inline-block font-small"
+  %>
+</div>
+
+
